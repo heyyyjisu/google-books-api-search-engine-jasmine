@@ -41,3 +41,20 @@
     min-height: calc(100dvh - 4rem);
   }
 }
+
+.status {
+  font-family: $primary-font;
+  font-size: 14px;
+  color: $color-1;
+  margin-top: 2rem;
+
+  @include md {
+    font-size: 16px;
+  }
+  @include lg {
+    font-size: 18px;
+  }
+  @include xl {
+    font-size: 20px;
+  }
+}

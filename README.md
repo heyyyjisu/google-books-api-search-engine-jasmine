@@ -1,8 +1,8 @@
-# Bookbound
+# Google book API
 
 A book search engine built with React and the Google Books API. Search for any book, browse bestsellers, and tap a card for details.
 
-![Screenshot](./public/screenshot.png)
+<img src="./public/screenshot.png" alt="Screenshot" width="600" />
 
 ## Tech Stack
 
