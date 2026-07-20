@@ -52,9 +52,9 @@ function HomePage() {
       {selectedBook && (
         <Modal book={selectedBook} onClose={() => setSelectedBook(null)} />
       )}
-      {isLoading && <p>Loading...</p>}
-      {noResult && <p>There is no books found</p>}
-      {error && <p>Something went wrong</p>}
+      {isLoading && <p className={classes.status}>Loading...</p>}
+      {noResult && <p className={classes.status}>There is no books found</p>}
+      {error && <p className={classes.status}>Something went wrong</p>}
       <Footer />
     </div>
   );
