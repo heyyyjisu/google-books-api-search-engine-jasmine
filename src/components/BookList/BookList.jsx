@@ -1,18 +1,11 @@
+import classes from "./BookList.module.scss";
 import BookCard from "../BookCard/BookCard";
 
-function BookList({ books }) {
+function BookList({ books, onBookClick }) {
   return (
-    <div>
+    <div className={classes.bookList}>
       {books.map((b) => (
-        <BookCard
-          title={b.volumeInfo.title}
-          subtitle={b.volumeInfo.subtitle}
-          authors={b.volumeInfo.authors}
-          cat={b.volumeInfo.categories}
-          pubDate={b.volumeInfo.publishedDate}
-          imgLink={b.volumeInfo.imageLinks.smallThumbnail}
-          avgRating={b.volumeInfo.averageRating}
-        />
+        <BookCard book={b} onClick={onBookClick} key={b.id} />
       ))}
     </div>
   );

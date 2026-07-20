@@ -1,23 +1,11 @@
-function BookCard({
-  title,
-  subtitle,
-  authors,
+import classes from "./BookCard.module.scss";
 
-  cat,
-  pubDate,
-  imgLink,
-  avgRating,
-}) {
+function BookCard({ book, onClick }) {
   return (
-    <div>
-      <img src={imgLink} />
-      <p>title: {title}</p>
-      <p>subtitle: {subtitle}</p>
-      <p>authors: {authors}</p>
-      <p>categories: {cat}</p>
-      <p>published Date: {pubDate}</p>
-      <p>Average Rating: {avgRating}</p>
-    </div>
+    <article className={classes.bookcard} onClick={() => onClick(book)}>
+      <img src={book.volumeInfo.imageLinks.smallThumbnail} />
+      <p>{book.volumeInfo.title}</p>
+    </article>
   );
 }
 

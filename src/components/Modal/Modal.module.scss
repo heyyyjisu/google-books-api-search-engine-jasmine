@@ -1,0 +1,171 @@
+@use "../../scss/variables/colors" as *;
+@use "../../scss/variables/variables" as *;
+@use "../../scss/mixins/media" as *;
+
+.selectedbook {
+  background: $color-3;
+  padding: 1.5rem;
+  border-radius: 30px;
+  max-width: 320px;
+
+  position: relative;
+
+  outline: 4px solid $color-6;
+  outline-offset: -12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include md {
+    max-width: 480px;
+  }
+  @include lg {
+    max-width: 560px;
+  }
+  @include xl {
+    max-width: 720px;
+    padding: 3rem;
+  }
+}
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.closeBtn {
+  all: unset;
+  position: absolute;
+  top: -3rem;
+  right: 0.5rem;
+  font-size: 24px;
+  cursor: pointer;
+  color: $color-6;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include md {
+    top: -3rem;
+    right: 0.75rem;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+}
+
+.inner {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding-bottom: 1rem;
+
+  img {
+    width: 80px;
+    height: 120px;
+    object-fit: cover;
+    flex-shrink: 0;
+    border-radius: 4px;
+
+    @include md {
+      width: 100px;
+      height: 150px;
+    }
+    @include lg {
+      width: 120px;
+      height: 180px;
+    }
+    @include xl {
+      width: 160px;
+      height: 240px;
+    }
+  }
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @include md {
+    gap: 12px;
+  }
+  @include xl {
+    gap: 16px;
+  }
+
+  h2 {
+    font-family: $secondary-font;
+    font-size: 16px;
+    margin-bottom: 0.15rem;
+
+    @include md {
+      font-size: 20px;
+    }
+    @include lg {
+      font-size: 24px;
+    }
+  }
+  h3 {
+    font-family: $secondary-font;
+    font-size: 13px;
+    font-style: italic;
+    opacity: 0.7;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+
+    @include md {
+      font-size: 15px;
+    }
+    @include lg {
+      font-size: 18px;
+    }
+  }
+
+  p {
+    margin: 0;
+    font-size: 12px;
+
+    @include md {
+      font-size: 13px;
+    }
+    @include lg {
+      font-size: 15px;
+    }
+  }
+}
+
+.authors {
+  font-size: 12px;
+  color: $color-1;
+}
+
+.modalWrapper {
+  position: relative;
+}
+
+.label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: $color-1;
+  opacity: 0.6;
+  margin-top: 0.3rem;
+  margin-bottom: 0.1rem;
+
+  @include md {
+    font-size: 11px;
+  }
+
+  @include xl {
+    font-size: 12px;
+  }
+}
