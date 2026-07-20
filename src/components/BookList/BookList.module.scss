@@ -1,0 +1,20 @@
+@use "../../scss/variables/colors" as *;
+@use "../../scss/variables/variables" as *;
+@use "../../scss/mixins/media" as *;
+
+.bookList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+
+  @include md {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include lg {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  @include xl {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}

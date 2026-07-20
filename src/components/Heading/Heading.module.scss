@@ -1,5 +1,35 @@
+@use "../../scss/variables/colors" as *;
+@use "../../scss/variables/variables" as *;
+@use "../../scss/mixins/media" as *;
+
 .heading {
+  font-family: $secondary-font;
+  padding: 2rem;
   display: flex;
-  flex-direction: column;
-  color: blue;
+  justify-content: center;
+
+  h1 {
+    font-weight: 400;
+  }
+}
+
+.line {
+  display: block;
+  font-size: 36px;
+  text-align: center;
+
+  @include md {
+    font-size: 60px;
+  }
+  @include xl {
+    font-size: 80px;
+  }
+}
+
+.accent {
+  color: $color-5;
+  letter-spacing: 0.5em;
+  margin-right: -0.8em;
+  font-weight: 900;
+  font-style: italic;
 }

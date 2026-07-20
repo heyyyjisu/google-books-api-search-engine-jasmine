@@ -1,1 +1,7 @@
-/* unlikely to need any styling at the app level but we'll leave this wired up just in case */
+@use "./scss/variables/colors" as *;
+
+body {
+  background-color: $color-4;
+  width: 100dvw;
+  height: 100dvh;
+}

@@ -1,0 +1,43 @@
+@use "../../scss/variables/colors" as *;
+@use "../../scss/variables/variables" as *;
+@use "../../scss/mixins/media" as *;
+
+.container {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $primary-font;
+  background-color: $color-3;
+  margin: 2rem;
+  outline: 2px solid $color-4;
+  outline-offset: -12px;
+
+  @include md {
+    margin: 3rem 4rem;
+  }
+
+  @include xl {
+    margin: 6rem 6rem;
+  }
+
+  @include md {
+    outline-offset: -12px;
+  }
+}
+
+.hero {
+  min-height: calc(100dvh - 2rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 24vh;
+
+  @include md {
+    min-height: calc(100dvh - 4rem);
+  }
+  @include xl {
+    min-height: calc(100dvh - 4rem);
+  }
+}

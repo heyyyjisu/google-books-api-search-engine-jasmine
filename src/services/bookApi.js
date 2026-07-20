@@ -11,5 +11,5 @@ export async function getBooks(term) {
     },
   });
   console.log(res.data.items);
-  return res.data.items;
+  return res.data.items || [];
 }

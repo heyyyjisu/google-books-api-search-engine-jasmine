@@ -1,17 +1,20 @@
+import classes from "./SearchBar.module.scss";
 import { useState } from "react";
-import { getBooks } from "../../services/BookApi";
 
 function SearchBar({ onSearch }) {
   const [term, setTerm] = useState("");
 
   return (
-    <div>
+    <div className={classes.searchBar}>
       <input
+        className={classes.searchInput}
         type="text"
         value={term}
         onChange={(e) => setTerm(e.target.value)}
       />
-      <button onClick={() => onSearch(term)}>Search</button>
+      <button className={classes.searchBtn} onClick={() => onSearch(term)}>
+        Search
+      </button>
     </div>
   );
 }

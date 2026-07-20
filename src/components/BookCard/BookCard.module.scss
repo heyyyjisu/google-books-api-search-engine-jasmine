@@ -1,0 +1,57 @@
+@use "../../scss/variables/colors" as *;
+@use "../../scss/variables/variables" as *;
+@use "../../scss/mixins/media" as *;
+
+.bookcard {
+  background-color: $color-3;
+  padding: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s;
+  overflow: hidden;
+  min-width: 0;
+
+  @include md {
+    padding: 1rem;
+  }
+
+  &:active {
+    transform: scale(0.96);
+  }
+
+  &:hover {
+    transform: scale(1.02);
+    border-radius: 8px;
+    border: 1px solid $color-5;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 2/3;
+    object-fit: contain;
+
+    @include md {
+      height: 320px;
+    }
+    @include xl {
+      height: 460px;
+    }
+  }
+
+  p {
+    font-family: $primary-font;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 100%;
+    text-align: center;
+
+    @include md {
+      font-size: 22px;
+    }
+    @include xl {
+      font-size: 28px;
+    }
+  }
+}
