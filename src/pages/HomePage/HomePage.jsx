@@ -2,7 +2,7 @@ import Heading from "../../components/Heading/Heading";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import BookList from "../../components/BookList/BookList";
 import { useEffect, useState } from "react";
-import { getBooks } from "../../services/BookApi";
+import { getBooks } from "../../services/bookApi";
 import classes from "./HomePage.module.scss";
 import Modal from "../../components/Modal/Modal";
 import Footer from "../../components/Footer/Footer";
